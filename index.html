@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Khabar 24</title>
+<title>Khabar 24 | تازہ ترین خبریں</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -15,41 +14,43 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:#f2f2f2;
+    font-family:Arial,"Noto Nastaliq Urdu",sans-serif;
+    background:#f4f4f4;
     color:#222;
 }
 
 /* Header */
-
 header{
-    background:#b00020;
+    background:linear-gradient(135deg,#b00020,#e0002b);
     color:white;
-    padding:18px 15px;
+    padding:25px 15px;
     text-align:center;
 }
 
 header h1{
-    font-size:32px;
+    font-size:38px;
+    font-weight:bold;
 }
 
 header p{
-    margin-top:6px;
+    margin-top:7px;
+    font-size:16px;
 }
 
 /* Navigation */
-
 nav{
-    background:#222;
+    background:#171717;
     display:flex;
+    justify-content:center;
     overflow-x:auto;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    padding:14px 17px;
+    padding:15px 20px;
     white-space:nowrap;
+    transition:.3s;
 }
 
 nav a:hover{
@@ -57,261 +58,312 @@ nav a:hover{
 }
 
 /* Breaking News */
-
 .breaking{
     background:white;
-    margin:12px;
-    padding:13px;
-    border-right:5px solid #b00020;
+    margin:15px auto;
+    max-width:1100px;
+    padding:14px;
+    border-right:6px solid #b00020;
+    box-shadow:0 2px 7px rgba(0,0,0,.08);
     font-weight:bold;
 }
 
-/* Search */
+.breaking span{
+    background:#b00020;
+    color:white;
+    padding:6px 10px;
+    margin-left:8px;
+    border-radius:4px;
+}
 
+/* Search */
 .search{
-    padding:12px;
+    max-width:1100px;
+    margin:15px auto;
+    padding:0 12px;
 }
 
 .search input{
     width:100%;
-    padding:13px;
+    padding:15px;
     border:1px solid #ccc;
-    border-radius:7px;
+    border-radius:8px;
     font-size:16px;
+    outline:none;
+}
+
+.search input:focus{
+    border-color:#b00020;
 }
 
 /* Main */
-
 .container{
+    max-width:1100px;
+    margin:auto;
     padding:12px;
 }
 
 .section-title{
-    border-right:5px solid #b00020;
-    padding-right:10px;
-    margin:15px 0;
+    border-right:6px solid #b00020;
+    padding-right:12px;
+    margin:20px 0;
+}
+
+/* Category Buttons */
+.categories{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    margin-bottom:20px;
+}
+
+.categories button{
+    border:none;
+    background:white;
+    padding:10px 18px;
+    border-radius:20px;
+    cursor:pointer;
+    box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.categories button:hover{
+    background:#b00020;
+    color:white;
+}
+
+/* News Grid */
+.news-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
 /* News Card */
-
 .news-card{
     background:white;
-    margin-bottom:18px;
-    border-radius:9px;
+    border-radius:10px;
     overflow:hidden;
-    box-shadow:0 2px 7px rgba(0,0,0,.12);
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.news-card:hover{
+    transform:translateY(-4px);
 }
 
 .news-card img{
     width:100%;
-    height:190px;
+    height:210px;
     object-fit:cover;
 }
 
 .news-content{
-    padding:15px;
+    padding:17px;
 }
 
 .news-content h2{
-    font-size:21px;
-    margin-bottom:8px;
+    font-size:22px;
+    margin-bottom:9px;
 }
 
 .news-content p{
     color:#555;
-    line-height:1.7;
+    line-height:1.8;
 }
 
 .news-info{
     color:#888;
     font-size:13px;
-    margin-top:8px;
+    margin-top:10px;
 }
 
 .read-more{
     display:inline-block;
     background:#b00020;
     color:white;
-    padding:9px 15px;
-    margin-top:10px;
+    padding:10px 16px;
+    margin-top:12px;
     text-decoration:none;
     border-radius:5px;
 }
 
 /* Footer */
-
 footer{
-    background:#222;
+    background:#171717;
     color:white;
     text-align:center;
-    padding:22px;
-    margin-top:20px;
+    padding:28px 15px;
+    margin-top:30px;
 }
 
+footer p{
+    margin:6px;
+}
+
+/* Mobile */
+@media(max-width:700px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    nav{
+        justify-content:flex-start;
+    }
+
+    .news-grid{
+        grid-template-columns:1fr;
+    }
+
+    .news-card img{
+        height:190px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<h1>📰 Khabar 24</h1>
-
-<p>آپ کی خبر، سب سے پہلے</p>
-
+    <h1>📰 Khabar 24</h1>
+    <p>آپ کی خبر، سب سے پہلے</p>
 </header>
 
-
 <nav>
-
-<a href="#">ہوم</a>
-<a href="#">پاکستان</a>
-<a href="#">دنیا</a>
-<a href="#">کھیل</a>
-<a href="#">تعلیم</a>
-<a href="#">ٹیکنالوجی</a>
-
+    <a href="#">ہوم</a>
+    <a href="#">پاکستان</a>
+    <a href="#">دنیا</a>
+    <a href="#">کھیل</a>
+    <a href="#">تعلیم</a>
+    <a href="#">ٹیکنالوجی</a>
 </nav>
 
-
 <div class="breaking">
-
-🔴 بریکنگ نیوز: Khabar 24 کی تازہ ترین خبریں
-
+    <span>🔴 بریکنگ نیوز</span>
+    Khabar 24 پر تازہ ترین خبریں حاصل کریں
 </div>
-
 
 <div class="search">
-
-<input type="text" placeholder="🔍 خبر تلاش کریں...">
-
+    <input type="text" id="searchInput" placeholder="🔍 خبر تلاش کریں...">
 </div>
-
 
 <main class="container">
 
-<h2 class="section-title">
-تازہ ترین خبریں
-</h2>
+<h2 class="section-title">تازہ ترین خبریں</h2>
 
+<div class="categories">
+    <button onclick="filterNews('all')">تمام</button>
+    <button onclick="filterNews('pakistan')">پاکستان</button>
+    <button onclick="filterNews('world')">دنیا</button>
+    <button onclick="filterNews('sports')">کھیل</button>
+    <button onclick="filterNews('education')">تعلیم</button>
+    <button onclick="filterNews('technology')">ٹیکنالوجی</button>
+</div>
 
-<div class="news-card">
+<div class="news-grid">
 
+<div class="news-card" data-category="pakistan">
 <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c">
-
 <div class="news-content">
-
-<h2>
-پاکستان کی اہم ترین خبر
-</h2>
-
-<p>
-پاکستان سے متعلق تازہ ترین اہم معلومات اور خبریں Khabar 24 پر پڑھیں۔
-</p>
-
-<div class="news-info">
-📅 آج | 🇵🇰 پاکستان
+<h2>پاکستان کی اہم ترین خبر</h2>
+<p>پاکستان سے متعلق اہم معلومات اور تازہ خبریں Khabar 24 پر پڑھیں۔</p>
+<div class="news-info">📅 آج | 🇵🇰 پاکستان</div>
+<a href="#" class="read-more">مزید پڑھیں</a>
+</div>
 </div>
 
-<a href="#" class="read-more">
-مزید پڑھیں
-</a>
-
-</div>
-
-</div>
-
-
-<div class="news-card">
-
+<div class="news-card" data-category="world">
 <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2">
-
 <div class="news-content">
-
-<h2>
-دنیا کی تازہ ترین خبر
-</h2>
-
-<p>
-دنیا بھر سے اہم خبریں اور تازہ ترین معلومات یہاں حاصل کریں۔
-</p>
-
-<div class="news-info">
-📅 آج | 🌍 دنیا
+<h2>دنیا کی تازہ ترین خبر</h2>
+<p>دنیا بھر سے اہم خبریں اور تازہ ترین معلومات یہاں حاصل کریں۔</p>
+<div class="news-info">📅 آج | 🌍 دنیا</div>
+<a href="#" class="read-more">مزید پڑھیں</a>
+</div>
 </div>
 
-<a href="#" class="read-more">
-مزید پڑھیں
-</a>
-
-</div>
-
-</div>
-
-
-<div class="news-card">
-
+<div class="news-card" data-category="sports">
 <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211">
-
 <div class="news-content">
-
-<h2>
-کھیلوں کی بڑی خبر
-</h2>
-
-<p>
-کرکٹ اور دیگر کھیلوں کی تازہ ترین خبریں Khabar 24 پر۔
-</p>
-
-<div class="news-info">
-📅 آج | 🏏 کھیل
+<h2>کھیلوں کی بڑی خبر</h2>
+<p>کرکٹ اور دیگر کھیلوں کی تازہ ترین خبریں Khabar 24 پر۔</p>
+<div class="news-info">📅 آج | 🏏 کھیل</div>
+<a href="#" class="read-more">مزید پڑھیں</a>
+</div>
 </div>
 
-<a href="#" class="read-more">
-مزید پڑھیں
-</a>
-
+<div class="news-card" data-category="education">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+<div class="news-content">
+<h2>تعلیم کی اہم خبر</h2>
+<p>طلبہ کے لیے تعلیم، امتحانات اور اسکالرشپس سے متعلق اہم معلومات۔</p>
+<div class="news-info">📅 آج | 🎓 تعلیم</div>
+<a href="#" class="read-more">مزید پڑھیں</a>
+</div>
 </div>
 
-</div>
-
-
-<div class="news-card">
-
+<div class="news-card" data-category="technology">
 <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
-
 <div class="news-content">
-
-<h2>
-ٹیکنالوجی کی نئی خبر
-</h2>
-
-<p>
-ٹیکنالوجی کی دنیا سے تازہ ترین معلومات اور اہم خبریں۔
-</p>
-
-<div class="news-info">
-📅 آج | 💻 ٹیکنالوجی
+<h2>ٹیکنالوجی کی نئی خبر</h2>
+<p>ٹیکنالوجی کی دنیا سے تازہ ترین معلومات اور اہم خبریں۔</p>
+<div class="news-info">📅 آج | 💻 ٹیکنالوجی</div>
+<a href="#" class="read-more">مزید پڑھیں</a>
 </div>
-
-<a href="#" class="read-more">
-مزید پڑھیں
-</a>
-
 </div>
 
 </div>
-
 </main>
 
-
 <footer>
-
-<p>© 2026 Khabar 24</p>
-
+<p>© 2026 Khabar 24 — تمام حقوق محفوظ ہیں</p>
 <p>آپ کی خبر، سب سے پہلے</p>
-
 </footer>
 
+<script>
+
+/* Category Filter */
+function filterNews(category){
+
+    let cards=document.querySelectorAll(".news-card");
+
+    cards.forEach(function(card){
+
+        if(category==="all"){
+            card.style.display="block";
+        }
+        else if(card.dataset.category===category){
+            card.style.display="block";
+        }
+        else{
+            card.style.display="none";
+        }
+
+    });
+}
+
+/* Search */
+document.getElementById("searchInput").addEventListener("input",function(){
+
+    let search=this.value.toLowerCase();
+    let cards=document.querySelectorAll(".news-card");
+
+    cards.forEach(function(card){
+
+        let text=card.innerText.toLowerCase();
+
+        if(text.includes(search)){
+            card.style.display="block";
+        }
+        else{
+            card.style.display="none";
+        }
+
+    });
+
+});
+
+</script>
+
 </body>
-</html>
+    </html>
